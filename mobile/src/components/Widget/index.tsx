@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 import { styles } from './styles';
 import { ChatTeardropDots } from 'phosphor-react-native';
 import { theme } from '../../theme';

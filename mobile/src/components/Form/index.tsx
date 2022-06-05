@@ -55,7 +55,9 @@ export function Form({
     try {
       await api.post('/feedbacks', {
         type: feedbackType,
-        screenshot: `data:image/png;base64, ${screenshotBase64}`,
+        screenshot: screenshot
+          ? `data:image/png;base64, ${screenshotBase64}`
+          : null,
         comment,
       });
 
