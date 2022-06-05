@@ -1,37 +1,54 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { View } from 'react-native';
-import { Widget } from './src/components/Widget';
+import Widget from './src/components/Widget';
 import { theme } from './src/theme';
-import {
-  useFonts,
-  Inter_400Regular,
-  Inter_500Medium,
-} from '@expo-google-fonts/inter';
+import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import * as Font from 'expo-font';
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    Inter_400Regular,
-    Inter_500Medium,
-  });
+  const [appIsReady, setAppIsReady] = useState(false);
 
   useEffect(() => {
-    const prepare = async () => {
-      if (!fontsLoaded) {
+    async function prepare() {
+      try {
         await SplashScreen.preventAutoHideAsync();
-      } else {
-        await SplashScreen.hideAsync();
+
+        await Font.loadAsync({
+          Inter_400Regular,
+          Inter_500Medium,
+        });
+
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+      } catch (e) {
+        console.warn(e);
+      } finally {
+        setAppIsReady(true);
       }
-    };
+    }
 
     prepare();
-  }, [fontsLoaded]);
+  }, []);
+
+  const onLayoutRootView = useCallback(async () => {
+    if (appIsReady) {
+      await SplashScreen.hideAsync();
+    }
+  }, [appIsReady]);
+
+  if (!appIsReady) {
+    return null;
+  }
 
   return (
-    <View style={{ flex: 1, backgroundColor: theme.colors.background }}>
-      <Widget />
+    <View
+      style={{ flex: 1, backgroundColor: theme.colors.background }}
+      onLayout={onLayoutRootView}
+    >
       <StatusBar style="light" backgroundColor="transparent" translucent />
+      <Widget />
     </View>
   );
 }
