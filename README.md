@@ -18,6 +18,7 @@
 
 Monorepo of Full-stack application Feedback Widget assistant.
 This project aim to help developers or application's maintainers to get feedback from their users by:
+
 1. Allowing users to leave feedback about Problems, Ideas and Others
 2. Getting a user comment about what it's going on
 3. Getting a screenshot of application's screen if necessary
@@ -93,14 +94,13 @@ Here are some examples of how you can set up your `.env` files
 ### On Web application:
 
 ```js
-VITE_API_URL = 'http://localhost:3333';
+VITE_API_URL='http://localhost:3333'
 ```
 
 ### On Backend:
 
 ```js
-DATABASE_URL =
-  'postgresql://<username>:<password>@<hostname>:<port>/<database>';
+DATABASE_URL='postgresql://<username>:<password>@<hostname>:<port>/<database>'
 ```
 
 <br>
