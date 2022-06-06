@@ -54,7 +54,7 @@ Technologies that were used on this application:
 
 From project's root file:
 
-## Web application:
+### Web application:
 
 ```sh
 $ cd web
@@ -62,7 +62,7 @@ $ yarn install
 $ yarn dev
 ```
 
-## Mobile:
+### Mobile:
 
 ```sh
 $ cd mobile
@@ -70,7 +70,7 @@ $ yarn install
 $ yarn start
 ```
 
-## Backend
+### Backend
 
 ```sh
 $ cd server
@@ -89,22 +89,22 @@ $ npx prisma studio
 
 Here are some examples of how you can set up your `.env` files
 
-## On Web application:
+### On Web application:
 
 ```js
 VITE_API_URL='http://localhost:3333';
 ```
 
-## On Backend:
+### On Backend:
 ```js
-DATABASE_URL="postgresql://root:root@192.168.0.5:5432/feedbacks"
+DATABASE_URL="postgresql://<username>:<password>@<hostname>:<port>/<database>"
 ```
 
 <br>
 
 ## 📝 License
 
-MIT License © Yuri Paiva. Check this [LICENSE](LICENSE.md) for more details
+MIT License © Yuri Paiva. Check [LICENSE](LICENSE.md) for more details
 
 ---
 <br>
