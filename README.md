@@ -16,7 +16,7 @@
 
 # 💡 Introduction
 
-Full-stack application Feedback Widget
+Monorepo of Full-stack application Feedback Widget
 
 1. Allows users to leave feedback about Problems, Ideas and Others
 2. Send a comment
@@ -25,7 +25,7 @@ Full-stack application Feedback Widget
 
 <br>
 
-# 🧪 Technologies
+## 🧪 Technologies
 
 Technologies that were used on this application:
 
@@ -41,7 +41,7 @@ Technologies that were used on this application:
 
 <br>
 
-# 🖥 Pre-requisites:
+## 🖥 Pre-requisites:
 
 - NodeJS
 - Expo
@@ -50,7 +50,7 @@ Technologies that were used on this application:
 
 <br/>
 
-# 🚀 How to Run it?
+## 🚀 How to Run it?
 
 From project's root file:
 
@@ -75,8 +75,9 @@ $ yarn start
 ```sh
 $ cd server
 $ yarn install
+
 # Run migrations
-$ npx prisma migrate dev 
+$ npx prisma migrate dev
 $ yarn dev
 
 # Run prisma studio on another console
@@ -85,20 +86,28 @@ $ npx prisma studio
 
 <br/>
 
-# ⚙️ Environment Variables
+## ⚙️ Environment Variables
 
 Here are some examples of how you can set up your `.env` files
 
 ### On Web application:
 
 ```js
-VITE_API_URL='http://localhost:3333';
+VITE_API_URL = 'http://localhost:3333';
 ```
 
 ### On Backend:
+
 ```js
-DATABASE_URL="postgresql://<username>:<password>@<hostname>:<port>/<database>"
+DATABASE_URL =
+  'postgresql://<username>:<password>@<hostname>:<port>/<database>';
 ```
+
+<br>
+
+## 🔖 Layout
+
+Check Figma Layout of this project [here](https://www.figma.com/community/file/1102912516166573468/Feedback-Widget)
 
 <br>
 
@@ -107,6 +116,7 @@ DATABASE_URL="postgresql://<username>:<password>@<hostname>:<port>/<database>"
 MIT License © Yuri Paiva. Check [LICENSE](LICENSE.md) for more details
 
 ---
+
 <br>
 
 Made with 💜 &nbsp;by Yuri Paiva
