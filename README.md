@@ -16,12 +16,12 @@
 
 ## 💡 Introduction
 
-Monorepo of Full-stack application Feedback Widget
-
-1. Allows users to leave feedback about Problems, Ideas and Others
-2. Send a comment
-3. Send a screenshot of application's screen if necessary
-4. Feedback submission goes to application's support via email
+Monorepo of Full-stack application Feedback Widget assistant.
+This project aim to help developers or application's maintainers to get feedback from their users by:
+1. Allowing users to leave feedback about Problems, Ideas and Others
+2. Sending a user comment
+3. Sending a screenshot of application's screen if necessary
+4. Submitting user's feedback to application's support via email
 
 <br>
 
