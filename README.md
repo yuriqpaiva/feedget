@@ -19,8 +19,8 @@
 Monorepo of Full-stack application Feedback Widget assistant.
 This project aim to help developers or application's maintainers to get feedback from their users by:
 1. Allowing users to leave feedback about Problems, Ideas and Others
-2. Sending a user comment
-3. Sending a screenshot of application's screen if necessary
+2. Getting a user comment about what it's going on
+3. Getting a screenshot of application's screen if necessary
 4. Submitting user's feedback to application's support via email
 
 <br>
@@ -30,7 +30,7 @@ This project aim to help developers or application's maintainers to get feedback
 Technologies that were used on this application:
 
 - [React](https://reactjs.org)
-- [Tailwindcss](https://tailwindcss.com)
+- [TailwindCSS](https://tailwindcss.com)
 - [Vite](https://vitejs.dev)
 - [TypeScript](https://www.typescriptlang.org)
 - [Express](https://expressjs.com/pt-br)
